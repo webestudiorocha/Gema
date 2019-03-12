@@ -19,7 +19,7 @@ $template->themeInit();
     <div id="page" class="clearfix">
         <!-- Featured Title -->
         <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix">
+            <div id="featured-title-inner" class="container clearfix row">
                 <div class="featured-title-inner-wrap">
                     <div class="featured-title-heading-wrap">
                         <h1 class="feautured-title-heading">

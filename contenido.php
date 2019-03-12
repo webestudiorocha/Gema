@@ -21,9 +21,9 @@ $template->themeInit();
 
         <!-- Featured Title -->
         <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix">
-                <div class="featured-title-inner-wrap">
-                    <div class="featured-title-heading-wrap">
+            <div id="featured-title-inner" class="container clearfix row ">
+                <div class="featured-title-inner-wrap ">
+                    <div class="featured-title-heading-wrap ">
                         <h1 class="feautured-title-heading">
                             Empresa
                         </h1>

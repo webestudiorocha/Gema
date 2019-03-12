@@ -23,7 +23,7 @@ $funciones_nav = new Clases\PublicFunction();
                         <span class="text">Seguinos</span>
                         <span class="icons">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
                                 </span>
                     </div>
                 </div><!-- /.top-bar-socials -->

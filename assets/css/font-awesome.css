@@ -1791,7 +1791,7 @@
   content: "\f231";
 }
 .fa-whatsapp:before {
-  content: "\f232";
+  content: "\f232" !important;
 }
 .fa-server:before {
   content: "\f233";

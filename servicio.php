@@ -23,7 +23,7 @@ $template->themeInit();
 
         <!-- Featured Title -->
         <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix">
+            <div id="featured-title-inner" class="container clearfix row">
                 <div class="featured-title-inner-wrap">
                     <div class="featured-title-heading-wrap">
                         <h1 class="feautured-title-heading">
@@ -41,7 +41,7 @@ $template->themeInit();
                 <div id="site-content" class="site-content clearfix">
                     <div id="inner-content" class="inner-content-wrap">
                         <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="60" data-smobile="60"></div>
-                        <div class="themesflat-row equalize sm-equalize-auto clearfix">
+                        <div class="themesflat-row equalize sm-equalize-auto clearfix row">
                             <div class="col-md-12 bg-f7f">
                                 <div class="themesflat-content-box clearfix" data-margin="0 10px 0 43px" data-mobilemargin="0 15px 0 15px">
                                     <?php
@@ -59,66 +59,6 @@ $template->themeInit();
 
                         </div><!-- /.themesflat-row -->
                         <div class="themesflat-spacer clearfix" data-desktop="39" data-mobile="39" data-smobile="39"></div>
-                        <div class="themesflat-spacer clearfix" data-desktop="37" data-mobile="35" data-smobile="35"></div>
-                        <div class="flat-content-wrap style-2 clearfix">
-                            <div class="item">
-                                <div class="inner">
-                                    <div class="themesflat-spacer clearfix" data-desktop="10" data-mobile="10" data-smobile="10"></div>
-                                    <h5 class="title">OUR SERVICES INCLUDE:</h5>
-                                    <p>We have successfully completed projects in numerous states across the continental United States. Autora Construction Services has a proven track record of:</p>
-                                    <div class="themesflat-spacer clearfix" data-desktop="8" data-mobile="8" data-smobile="8"></div>
-                                    <div class="themesflat-list has-icon style-1 icon-left size-16 clearfix">
-                                        <div class="inner">
-                                            <span class="item">
-                                                <span class="icon"><i class="fa fa-check-circle"></i></span>
-                                                <span class="text">Interior Design Planning</span>
-                                            </span>
-                                        </div>
-                                    </div><!-- /.themeslat-list -->
-                                    <div class="themesflat-list has-icon style-1 icon-left size-16 clearfix">
-                                        <div class="inner">
-                                            <span class="item">
-                                                <span class="icon"><i class="fa fa-check-circle"></i></span>
-                                                <span class="text">Colour & Finish Consultations</span>
-                                            </span>
-                                        </div>
-                                    </div><!-- /.themeslat-list -->
-                                    <div class="themesflat-list has-icon style-1 icon-left size-16 clearfix">
-                                        <div class="inner">
-                                            <span class="item">
-                                                <span class="icon"><i class="fa fa-check-circle"></i></span>
-                                                <span class="text">Architectural & Custom Lighting</span>
-                                            </span>
-                                        </div>
-                                    </div><!-- /.themeslat-list -->
-                                    <div class="themesflat-list has-icon style-1 icon-left size-16 clearfix">
-                                        <div class="inner">
-                                            <span class="item">
-                                                <span class="icon"><i class="fa fa-check-circle"></i></span>
-                                                <span class="text">Glass & Acrylic Specifications</span>
-                                            </span>
-                                        </div>
-                                    </div><!-- /.themeslat-list -->
-                                </div>
-                            </div><!-- /.item -->
-                            <div class="item">
-                                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="35"></div>
-                                <div class="themesflat-content-box clearfix" data-margin="0 0 0 11px" data-mobilemargin="0 0 0 0">
-                                    <div class="inner pd35 bg-ffc">
-                                        <h5 class="title text-white line-height-24 padding-left-7">THIS AWESOME SERVICE BRINGS FULL INTEREST INFORMATION FOR YOUR PURPOSE</h5>
-                                        <div class="themesflat-spacer clearfix" data-desktop="16" data-mobile="16" data-smobile="16"></div>
-                                        <div class="button-wrap has-icon icon-right size-14">
-                                            <a href="#" class="themesflat-button bg-white color-333 w100 font-weight-400 no-letter-spacing pd26"><span>Download .PDF <span class="icon"><i class="fa fa-file-pdf-o"></i></span></span></a>
-                                        </div><!-- /.button-wrap -->
-                                        <div class="themesflat-spacer clearfix" data-desktop="6" data-mobile="6" data-smobile="6"></div>
-                                        <div class="button-wrap has-icon icon-right size-14">
-                                            <a href="#" class="themesflat-button bg-white color-333 w100 font-weight-400 no-letter-spacing pd26 "><span> Download .DOC <span class="icon"><i class="fa fa-file-word-o"></i></span></span></a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="themesflat-spacer clearfix" data-desktop="37" data-mobile="35" data-smobile="35"></div>
                     </div><!-- /#inner-content -->
                 </div><!-- /#site-content -->

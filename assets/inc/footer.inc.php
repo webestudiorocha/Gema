@@ -84,8 +84,8 @@ $novedadesData = $novedades->listWithOps("", "", "3");
                     <li class="fa fa-facebook">
                         <a href="#">Facebook</a>
                     </li>
-                <li class="fa fa-twitter">
-                    <a href="#">Twitter</a>
+                <li class="fa fa-instagram">
+                    <a href="#">Instagram</a>
                 </li>
                 </ul>
             </div><!-- /.bottom-bar-menu -->

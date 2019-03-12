@@ -89,6 +89,7 @@ class Sliders
             }
             return $array ;
         }
+
     }
 
     function paginador($filter,$cantidad) {

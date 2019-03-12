@@ -17,7 +17,6 @@ $template->set("description", "Inicio " . TITULO);
 $template->set("keywords", "Inicio," . TITULO);
 $template->set("imagen", LOGO);
 $template->set("body", "header-fixed page no-sidebar header-style-2 topbar-style-2 menu-has-search");
-
 $template->themeInit();
 $producto->set("cod", $id);
 $sliders_data = $sliders->list('', '', '');
@@ -39,17 +38,19 @@ $categoria_data = $categoria->list($filter);
                        <div class="page-content">
                            <!-- SLIDER -->
                             <div class="rev_slider_wrapper fullwidthbanner-container" >
-                                <div id="rev-slider1" class="rev_slider fullwidthabanner" >
+                                <div id="rev-slider1" class="rev_slider fullwidthabanner" ><ul>
                                     <?php
                                     $activo = 0;
                                     foreach ($sliders_data as $sli) {
                                     $imagenes->set("cod", $sli['cod']);
                                     $img_data = $imagenes->view();
                                     ?>
-                                    <ul>
+
+
                                         <!-- Slide 1 -->
                                         <li data-transition="random">
                                             <!-- Main Image -->
+                                            <img src="<?= URL . '/' . $img_data['ruta'] ?>"  alt="" data-bgposition="center center" data-no-retina>
                                             <!-- Layers -->
                                             <div class="tp-caption tp-resizeme text-white font-heading font-weight-600"
                                                 data-x="['left','left','left','center']" data-hoffset="['34','34','34','0']"
@@ -68,19 +69,13 @@ $categoria_data = $categoria->list($filter);
                                                 data-splitin="none"
                                                 data-splitout="none"
                                                 data-responsive_offset="on">
-                                                <div class="carousel-item <?php if ($activo == 0) {
-                                                    echo 'active';
-                                                    $activo++;
-                                                } ?>" style=" height: 696px; background: url(<?= URL . '/' . $img_data['ruta'] ?>) no-repeat center center/cover;">
-
-                                                </div>
                                             </div>
                                         </li>
                                         <!-- /End Slide 1 -->
-                                    </ul>
+
                                         <?php
                                     }
-                                    ?>
+                                    ?></ul>
                                 </div>
 
                             </div>
