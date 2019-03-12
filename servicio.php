@@ -31,16 +31,16 @@ $template->themeInit();
                         <div id="inner-content" class="inner-content-wrap">
                             <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="60"
                                  data-smobile="60"></div>
-                            <div class="themesflat-row equalize sm-equalize-auto clearfix row">
-                                <div class="col-md-12 bg-f7f">
+                            <div class="themesflat-row equalize sm-equalize-auto clearfix row col-md-12">
+                                <div >
                                     <div class="themesflat-content-box clearfix" data-margin="0 10px 0 43px"
                                          data-mobilemargin="0 15px 0 15px">
                                         <?php
                                         $imagenes->set("cod", $servicio_data["cod"]);
                                         $img = $imagenes->view(); ?>
                                         <div class="themesflat-headings style-2 clearfix">
-                                            <img src="<?= URL . '/' . $img['ruta'] ?>" width="100%"
-                                                 style=" background: no-repeat center center/cover;">
+                                            <img src="<?= URL . '/' . $img['ruta'] ?>"
+                                                 style="width: 100%; background: no-repeat center center/cover;">
                                             <div class="sep has-width w80 accent-bg margin-top-20 clearfix"></div>
                                             <p class="sub-heading margin-top-33 line-height-24"><?= ucfirst($servicio_data['desarrollo']); ?></p>
                                         </div>

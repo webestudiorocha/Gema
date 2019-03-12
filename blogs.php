@@ -69,7 +69,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                                                   ?></span>
                                         </span>
                                     </span>
-                                            <div style="width: 100%; background: url(<?= URL . '/' . $img['ruta'] ?>)  no-repeat center center/cover;"></div>
+                                            <div style="width: 100% !important; background: url(<?= URL . '/' . $img['ruta'] ?>)  no-repeat center center/cover;"></div>
                                         </div>
 
                                        <a  href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"> <div class="overlay-effect bg-color-1">
@@ -149,7 +149,7 @@ Síguenos</span></h2>
                             </div><!-- /.widget_follow -->
 
                             <div class="widget widget_lastest">
-                                <h2 class="widget-title"><span>Blogs Recientes</span></h2>
+                                <h2 class="widget-title"><span>Recientes</span></h2>
                                 <?php
                                 foreach ($novedadesData as $nov) {
                                     $imagenes->set("cod", $nov['cod']);
@@ -158,16 +158,15 @@ Síguenos</span></h2>
                                     ?>
                                     <ul class="lastest-posts data-effect clearfix">
                                         <li class="clearfix">
-                                            <div class="thumb data-effect-item has-effect-icon ">
+                                            <div class="thumb data-effect-item has-effect-icon">
                                                 <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
                                                     <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
                                                 </a>
 
-                                                <div class="elm-link" style="margin-top: -12px !important;">
-                                                    <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"
-                                                       class="icon-2"></a>
-
-                                                </div>
+                                                <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
+                                                    <div class="overlay-effect bg-color-1">
+                                                    </div>
+                                                </a>
                                             </div>
                                             <div class="text">
                                                 <h3>
@@ -177,7 +176,6 @@ Síguenos</span></h2>
                                                             class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span>
                                             </div>
                                         </li>
-
 
                                     </ul>
                                 <?php } ?>

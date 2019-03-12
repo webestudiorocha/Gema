@@ -87,7 +87,7 @@ $template->themeInit();
                                                      </div><!-- /.themesflat-cousel-box -->
                                                     <div class="themesflat-spacer clearfix" data-desktop="40" data-mobile="40" data-smobile="40"></div>     
                                                     <div class="flat-content-wrap style-3 clearfix">
-                                                        <div class="sep has-width w60 accent-bg margin-top-18 clearfix"></div>                                          
+                                                        <div class="sep has-width w60 accent-bg  clearfix"></div>
                                                         <p class="margin-top-28"><?= ucfirst($productoData['desarrollo']); ?></p>
                                                     </div>
                                                 </div>

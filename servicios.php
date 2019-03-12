@@ -55,7 +55,7 @@ $funciones = new Clases\PublicFunction();
                                                             <div class="inner">
                                                                 <div class="thumb data-effect-item">
                                                                   <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
-                                                                      <img style=" height: 200px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                                                      <img style=" width: 100%;background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
                                                                       <div class="overlay-effect bg-color-accent"></div>   </a>
 
 
