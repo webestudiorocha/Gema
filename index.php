@@ -169,7 +169,7 @@ $categoria_data = $categoria->list($filter);
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="themesflat-spacer clearfix" data-desktop="39" data-mobile="35" data-smobile="35"></div>
+                                            <div class="themesflat-spacer clearfix row" data-desktop="39" data-mobile="35" data-smobile="35"></div>
                                             <div class="themesflat-carousel-box data-effect clearfix" data-gap="30" data-column="3" data-column2="2" data-column3="1" data-auto="false">
                                                 <div class="owl-carousel owl-theme">
                                                     <?php foreach ($servicio_data as $port): ?>
@@ -261,15 +261,12 @@ $categoria_data = $categoria->list($filter);
                                             <div class="elm-button text-center">
                                                 <a href="<?= URL ?>/productos.php" class="themesflat-button bg-accent">Todos los productos </a>
                                             </div>
-                                            <div class="themesflat-spacer clearfix" data-desktop="73" data-mobile="60" data-smobile="60"></div>
                                         </div><!-- /.col-md-12 -->
                                     </div><!-- /.row -->
                                 </div><!-- /.container-fluid -->
                                 <div class="bg-parallax-overlay overlay-black"></div>
                             </div>
                             <!-- END PROJECT -->
-                           <br>
-
                        </div><!-- /.page-content -->
                     </div><!-- /#inner-content -->
                 </div><!-- /#site-content -->

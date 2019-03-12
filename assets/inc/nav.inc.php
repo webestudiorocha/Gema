@@ -37,7 +37,7 @@ $funciones_nav = new Clases\PublicFunction();
             <div class="wrap-inner clearfix">
                 <div id="site-logo" class="clearfix">
                     <div id="site-log-inner">
-                        <a href="<?= URL; ?>/index.phpl" rel="home" class="main-logo">
+                        <a href="<?= URL; ?>/index" rel="home" class="main-logo">
                             <img src="<?= URL; ?>/assets/img/logo-small.png" alt="Autora" width="186" height="39" data-retina="assets/img/logo-small@2x.png" data-width="186" data-height="39">
                         </a>
                     </div>

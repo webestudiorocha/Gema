@@ -33,25 +33,25 @@ $novedadesData = $novedades->listWithOps("", "", "3");
                     <h2 class="widget-title"><span>Blogs Recientes</span></h2>
                     <?php
                     foreach ($novedadesData as $nov) {
-                    $imagenes->set("cod", $nov['cod']);
-                    $img = $imagenes->view();
-                    $fecha = explode("-", $nov['fecha']);
-                    ?>
-                    <ul class="lastest-posts data-effect clearfix">
-                        <li class="clearfix">
-                            <div class="thumb data-effect-item has-effect-icon">
-                                <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
-                                    <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
-                                </a>
-                                <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>" class="icon-2"> <div class="overlay-effect bg-color-2"></div></a>
-                            </div>
-                            <div class="text">
-                                <h3><a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"><?= $nov['titulo'] ?></a></h3>
-                                <span class="post-date"><span class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span>
-                            </div>
-                        </li>
+                        $imagenes->set("cod", $nov['cod']);
+                        $img = $imagenes->view();
+                        $fecha = explode("-", $nov['fecha']);
+                        ?>
+                        <ul class="lastest-posts data-effect clearfix">
+                            <li class="clearfix">
+                                <div class="thumb data-effect-item has-effect-icon">
+                                    <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
+                                        <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                    </a>
+                                    <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>" class="icon-2"> <div class="overlay-effect bg-color-2"></div></a>
+                                </div>
+                                <div class="text">
+                                    <h3><a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"><?= $nov['titulo'] ?></a></h3>
+                                    <span class="post-date"><span class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span>
+                                </div>
+                            </li>
 
-                    </ul>
+                        </ul>
                     <?php } ?>
                 </div><!-- /.widget_lastest -->
             </div><!-- /.col -->

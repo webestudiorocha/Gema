@@ -40,16 +40,8 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
     <div id="wrapper" class="animsition">
         <div id="page" class="clearfix">
             <!-- Featured Title -->
-            <div id="featured-title" class="featured-title clearfix">
-                <div id="featured-title-inner" class="container clearfix row">
-                    <div class="featured-title-inner-wrap">
-                        <div class="featured-title-heading-wrap">
-                            <h1 class="feautured-title-heading">
-                                Blogs
-                            </h1>
-                        </div>
-                    </div><!-- /.featured-title-inner-wrap -->
-                </div><!-- /#featured-title-inner -->
+            <div id="featured-title" class="featured-title clearfix text-center">
+             <h1 >Blogs</h1>
             </div>
             <!-- End Featured Title -->
             <!-- Main Content -->
@@ -105,6 +97,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                                                     Más</a>
                                             </div>
                                         </div>
+                                        <div class="themesflat-spacer clearfix" data-desktop="50" data-mobile="35" data-smobile="35"></div>
                                     </div><!-- /.post-content-wrap -->
                                 <?php } ?>
                             </article><!-- /.hentry -->
@@ -145,17 +138,10 @@ Síguenos</span></h2>
                                         </span>
                                         </div>
                                     </div>
-                                    <div class="follow-item twitter">
-                                        <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
-                                        </span>
-                                        </div>
-                                    </div>
-                                    <div class="follow-item google">
-                                        <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-google"></i></a>
+                                    <div class="follow-item instagram">
+                                        <div class="inner instagram">
+                                        <span class="socials instagram">
+                                            <a href="#"><i class="fa fa-instagram"></i></a>
                                         </span>
                                         </div>
                                     </div>

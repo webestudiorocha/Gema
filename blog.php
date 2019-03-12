@@ -21,7 +21,7 @@ $template->set("imagen", URL . "/" . $imagenes_data['ruta']);
 $template->set("favicon", LOGO);
 $template->set("keywords", strip_tags($novedades_data['keywords']));
 $template->set("description", ucfirst(substr(strip_tags($novedades_data['desarrollo']), 0, 160)));
-$template->set("body" , "header-fixed sidebar-right header-style-2 topbar-style-1 menu-has-search" );
+$template->set("body", "header-fixed sidebar-right header-style-2 topbar-style-1 menu-has-search");
 $template->themeInit();
 
 ?>
@@ -32,16 +32,8 @@ $template->themeInit();
 
 
         <!-- Featured Title -->
-        <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix row">
-                <div class="featured-title-inner-wrap">
-                    <div class="featured-title-heading-wrap">
-                        <h1 class="feautured-title-heading">
-                            <?= ucfirst($novedades_data['titulo']); ?>
-                        </h1>
-                    </div>
-                </div><!-- /.featured-title-inner-wrap -->
-            </div><!-- /#featured-title-inner -->            
+        <div id="featured-title" class="featured-title clearfix text-center">
+            <h1>  <?= ucfirst($novedades_data['titulo']); ?></h1>
         </div>
         <!-- End Featured Title -->
 
@@ -60,24 +52,23 @@ $template->themeInit();
                                 <div class="post-meta">
                                     <div class="post-meta-content">
                                         <div class="post-meta-content-inner">
-                                            <span class="post-date item"><span class="inner"><span class="entry-date"><?=$fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span></span>
+                                            <span class="post-date item"><span class="inner"><span
+                                                            class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span></span>
                                         </div>
                                     </div>
                                 </div><!-- /.post-meta -->
                                 <div class="post-content post-excerpt margin-bottom-43">
                                     <p class="line-height-27 letter-spacing-005">  <?= $novedades_data['desarrollo']; ?></p>
                                 </div><!-- /.post-excerpt -->
-                                <div class="post-tags-socials" >
+                                <div class="post-tags-socials">
                                     <div class="post-socials ">
                                         <a href="#" class="facebook"><span class="fa fa-facebook-square"></span></a>
-                                        <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
-                                        <a href="#" class="linkedin"><span class="fa fa-linkedin-square"></span></a>
-                                        <a href="#" class="pinterest"><span class="fa fa-pinterest-p"></span></a>
+                                        <a href="#" class="instagram"><span class="fa fa-instagram"></span></a>
                                     </div>
                                 </div>
-                                
+
                             </div><!-- /.post-content-wrap -->
-                        </article><!-- /.hentry -->                        
+                        </article><!-- /.hentry -->
 
                     </div><!-- /#inner-content -->
                 </div><!-- /#site-content -->
@@ -95,20 +86,14 @@ $template->themeInit();
                                         </span>
                                     </div>
                                 </div>
-                                <div class="follow-item twitter">
-                                    <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                <div class="follow-item instagram ">
+                                    <div class="inner instagram">
+                                        <span class="socials instagram">
+                                            <a href="#"><i class="fa fa-instagram"></i></a>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="follow-item google">
-                                    <div class="inner">
-                                        <span class="socials">
-                                            <a href="#"><i class="fa fa-google"></i></a>
-                                        </span>
-                                    </div>
-                                </div>
+
                             </div>
                         </div><!-- /.widget_follow -->
 
@@ -116,27 +101,32 @@ $template->themeInit();
                             <h2 class="widget-title"><span>Recientes</span></h2>
                             <?php
                             foreach ($novedadesData as $nov) {
-                            $imagenes->set("cod", $nov['cod']);
-                            $img = $imagenes->view();
-                            $fecha = explode("-", $nov['fecha']);
-                            ?>
-                            <ul class="lastest-posts data-effect clearfix">
-                                <li class="clearfix">
-                                    <div class="thumb data-effect-item has-effect-icon">
-                                        <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
-                                            <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
-                                        </a>
+                                $imagenes->set("cod", $nov['cod']);
+                                $img = $imagenes->view();
+                                $fecha = explode("-", $nov['fecha']);
+                                ?>
+                                <ul class="lastest-posts data-effect clearfix">
+                                    <li class="clearfix">
+                                        <div class="thumb data-effect-item has-effect-icon">
+                                            <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
+                                                <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                            </a>
 
-                                        <a  href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"> <div class="overlay-effect bg-color-1">
-                                            </div></a>
-                                    </div>
-                                    <div class="text">
-                                        <h3><a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"><?= $nov['titulo'] ?></a></h3>
-                                        <span class="post-date"><span class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span>
-                                    </div>
-                                </li>
+                                            <a href="<?= URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>">
+                                                <div class="overlay-effect bg-color-1">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="text">
+                                            <h3>
+                                                <a href="<?php echo URL . '/blog/' . $funciones->normalizar_link($nov['titulo']) . "/" . $nov['cod'] ?>"><?= $nov['titulo'] ?></a>
+                                            </h3>
+                                            <span class="post-date"><span
+                                                        class="entry-date"><?= $fecha[2] . "/" . $fecha[1] . "/" . $fecha[0] ?></span></span>
+                                        </div>
+                                    </li>
 
-                            </ul>
+                                </ul>
                             <?php } ?>
                         </div><!-- /.widget_lastest -->
 
@@ -144,9 +134,6 @@ $template->themeInit();
                 </div><!-- /#sidebar -->
             </div><!-- /#content-wrap -->
         </div><!-- /#main-content -->
-
-
-
 
 
     </div><!-- /#page -->

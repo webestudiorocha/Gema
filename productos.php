@@ -45,16 +45,8 @@ $numeroPaginas = $productos->paginador("", $cantidad);
 
 
             <!-- Featured Title -->
-            <div id="featured-title" class="featured-title clearfix">
-                <div id="featured-title-inner" class="container clearfix row">
-                    <div class="featured-title-inner-wrap">
-                        <div class="featured-title-heading-wrap">
-                            <h1 class="feautured-title-heading">
-                                Productos
-                            </h1>
-                        </div>
-                    </div><!-- /.featured-title-inner-wrap -->
-                </div><!-- /#featured-title-inner -->
+            <div id="featured-title" class="featured-title clearfix text-center">
+                <h1>Productos</h1>
             </div>
             <!-- End Featured Title -->
 
@@ -69,17 +61,8 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="themesflat-spacer clearfix" data-desktop="73"
-                                                     data-mobile="60" data-smobile="60"></div>
-                                                <ul class="themesflat-filter style-1 clearfix">
-                                                    <li class="active"><a href="#" data-filter="*">Todos</a></li>
-                                                    <?php foreach ($categoria_data as $categoria): ?>
-                                                        <li><a href="#"  data-filter=".<?= $categoria['cod']; ?>">
-                                                                <?php echo $categoria['titulo']; ?>
-                                                            </a>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                </ul>
+                                            
+
                                                 <div class="themesflat-spacer clearfix" id="<?= $categoria['cod'];?>" data-desktop="40"
                                                      data-mobile="35" data-smobile="35"></div>
                                                 <div class="themesflat-project style-2 isotope-project has-margin mg15 data-effect clearfix">
@@ -87,12 +70,9 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                                         <?php $imagenes->set("cod", $prod["cod"]);
                                                         $img = $imagenes->view(); ?>
                                                         <div class="project-item <?= $prod["categoria"]; ?> villa">
-
                                                             <div class="inner">
-
                                                                 <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49 imagen">
                                                                     <a href='<?= URL . '/producto/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'>
-
                                                                         <img src="<?= URL . "/" . $img["ruta"] ?>"
                                                                              class='img-fluid'
                                                                              style=' background: url("<?= URL . "/" . $img["ruta"] ?>") no-repeat center center/cover;'
@@ -101,7 +81,6 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                                                         <div class="elm-link">
                                                                             <a href="<?= URL . '/producto/' . $funciones->normalizar_link($prod['titulo']) . "/" . $prod['cod'] ?>"
                                                                                class="icon-1"> </a>
-
                                                                         </div>
                                                                     </a>
                                                                 </div>

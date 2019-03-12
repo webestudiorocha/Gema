@@ -23,16 +23,8 @@ $funciones = new Clases\PublicFunction();
 <div id="wrapper" class="animsition">
     <div id="page" class="clearfix">
         <!-- Featured Title -->
-        <div id="featured-title" class="featured-title clearfix">
-            <div id="featured-title-inner" class="container clearfix row">
-                <div class="featured-title-inner-wrap">
-                    <div class="featured-title-heading-wrap">
-                        <h1 class="feautured-title-heading">
-                            Todos los Servicios
-                        </h1>
-                    </div>
-                </div><!-- /.featured-title-inner-wrap -->
-            </div><!-- /#featured-title-inner -->            
+        <div id="featured-title" class="featured-title clearfix text-center">
+            <h1>Servicios</h1>
         </div>
         <!-- End Featured Title -->
 
