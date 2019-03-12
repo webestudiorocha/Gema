@@ -74,7 +74,7 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                                 <ul class="themesflat-filter style-1 clearfix">
                                                     <li class="active"><a href="#" data-filter="*">Todos</a></li>
                                                     <?php foreach ($categoria_data as $categoria): ?>
-                                                        <li><a href="#"  data-filter="#<?= $categoria['cod']; ?>">
+                                                        <li><a href="#"  data-filter=".<?= $categoria['cod']; ?>">
                                                                 <?php echo $categoria['titulo']; ?>
                                                             </a>
                                                         </li>
@@ -86,7 +86,7 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                                     <?php foreach ($producto_Data as $prod): ?>
                                                         <?php $imagenes->set("cod", $prod["cod"]);
                                                         $img = $imagenes->view(); ?>
-                                                        <div class="project-item green villa">
+                                                        <div class="project-item <?= $prod["categoria"]; ?> villa">
 
                                                             <div class="inner">
 
