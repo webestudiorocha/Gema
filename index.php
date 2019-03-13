@@ -101,7 +101,7 @@ $categoria_data = $categoria->list($filter);
                                     </div><!-- /.row -->
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12" style="padding-right: 0px !important;">
                                             <div class="themesflat-content-box clearfix" data-margin="0 5px 0 5px" data-mobilemargin="0 0 0 0">
                                                 <div class="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
                                                     <div >
@@ -125,7 +125,7 @@ $categoria_data = $categoria->list($filter);
                            <div class="row-about">
                                <div class="container-fluid">
                                    <div class="row equalize sm-equalize-auto">
-                                       <div class="col-md-6 half-background style-1">
+                                       <div class="col-md-6 half-background style-1" style="padding-right: 0px !important;">
                                            <img src="<?= URL?>/assets/img/arms-care-check-905874.jpg" style="width: 100%">
                                        </div><!-- /.col-md-6 -->
                                        <div class="col-md-6 bg-light-grey">
