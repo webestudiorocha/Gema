@@ -24,7 +24,7 @@ $funciones = new Clases\PublicFunction();
     <div id="page" class="clearfix">
         <!-- Featured Title -->
         <div id="featured-title" class="featured-title clearfix text-center">
-            <h1>Servicios</h1>
+            <h1 style="padding-top: 20px !important;">Servicios</h1>
         </div>
         <!-- End Featured Title -->
 
@@ -55,10 +55,8 @@ $funciones = new Clases\PublicFunction();
                                                             <div class="inner">
                                                                 <div class="thumb data-effect-item">
                                                                   <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
-                                                                      <img style=" width: 100%;background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                                                          <img style=" width: 100%;height: 250px; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
                                                                       <div class="overlay-effect bg-color-accent"></div>   </a>
-
-
                                                                 </div>
                                                                 <div class="text-wrap">
                                                                     <h5 class="heading"><a href="<?= URL . '/servicio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"><?= ucfirst($port['titulo']); ?></a></h5>

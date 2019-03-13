@@ -82,7 +82,7 @@ $novedadesData = $novedades->listWithOps("", "", "3");
             <div class="bottom-bar-menu">
                 <ul class="bottom-nav">
                     <li class="fa fa-facebook">
-                        <a href="#">Facebook</a>
+                        <a href="https://www.facebook.com/pages/category/Product-Service/Gema-Arquitectura-y-Construcci%C3%B3n-323910314828274/" target="_blank">Facebook</a>
                     </li>
                 <li class="fa fa-instagram">
                     <a href="#">Instagram</a>

@@ -4,8 +4,8 @@ Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
 $funciones = new Clases\PublicFunction();
 $template->set("title", "Gema| Blogs");
-$template->set("description", "Blogs de" . TITULO);
-$template->set("keywords", "Blogs de" . TITULO);
+$template->set("description", "Blogs de arquitectos, blogs de constructores, arquitectos, constructores, venta de puertas" . TITULO);
+$template->set("keywords", "Blogs de gema, arquitectos, constructores, ultimos blogs de gema, ultimos blogs de  arquitectos, ultimas novedades en arquitectos" . TITULO);
 $template->set("body", "header-fixed sidebar-right header-style-2 topbar-style-1 menu-has-search");
 $template->themeInit();
 $novedades = new Clases\Novedades();
@@ -41,7 +41,7 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
         <div id="page" class="clearfix">
             <!-- Featured Title -->
             <div id="featured-title" class="featured-title clearfix text-center">
-             <h1 >Blogs</h1>
+             <h1 style="padding-top: 20px !important;">Blogs</h1>
             </div>
             <!-- End Featured Title -->
             <!-- Main Content -->
@@ -128,13 +128,13 @@ $numeroPaginas = $novedades->paginador("", $cantidad);
                              data-smobile="60"></div>
                         <div id="inner-sidebar" class="inner-content-wrap">
                             <div class="widget widget_follow">
-                                <h2 class="widget-title"><span>
-Síguenos</span></h2>
+                                <h2 class="widget-title"><span>Seguinos</span></h2>
                                 <div class="follow-wrap clearfix col3 g8">
                                     <div class="follow-item facebook">
                                         <div class="inner">
                                         <span class="socials">
-                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="https://www.facebook.com/pages/category/Product-Service/Gema-Arquitectura-y-Construcci%C3%B3n-323910314828274/" target="_blank">
+                                                <i class="fa fa-facebook"></i></a>
                                         </span>
                                         </div>
                                     </div>

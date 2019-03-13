@@ -9,8 +9,8 @@ $novedades = new Clases\Novedades();
 $sliders = new Clases\Sliders();
 $contenido= new Clases\Contenidos();
 $template->set("title", TITULO . " | Contacto");
-$template->set("description", "Contacto de " . TITULO);
-$template->set("keywords", "Contacto de " . TITULO);
+$template->set("description", "Contacto de gema, contacto de arquitectos en brikmann, contacto de constructores en brikmann " . TITULO);
+$template->set("keywords", "Contacto de gema, contacto de arquitectos en brikmann, contacto de constructores en brikmann, gema, arquitectos, constructores " . TITULO);
 $template->set("body", "header-fixed page no-sidebar header-style-2 topbar-style-1 menu-has-search");
 $enviar = new Clases\Email();
 $template->themeInit();
@@ -19,7 +19,7 @@ $template->themeInit();
     <div id="page" class="clearfix">
         <!-- Featured Title -->
         <div id="featured-title" class="featured-title clearfix text-center">
-            <h1>Contacto</h1>
+            <h1 style="padding-top: 20px !important;">Contacto</h1>
         </div>
         <!-- End Featured Title -->
 
@@ -127,8 +127,7 @@ $template->themeInit();
                                        </div><!-- /.col-md-6 -->
                                        <div class="col-md-8">
                                            <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="35"></div>
-                                           <div class="themesflat-map style-2"></div>
-                                       </div><!-- /.col-md-6 -->
+                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13677.857776512517!2d-62.07521437751081!3d-31.013307254641305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943520b3965e5567%3A0xca32660a8a13246b!2zUG9ydGXDsWEsIEPDs3Jkb2Jh!5e0!3m2!1ses!2sar!4v1552490205407" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>                                       </div><!-- /.col-md-6 -->
                                    </div><!-- /.row -->
                                    <div class="row">
                                        <div class="col-md-12">

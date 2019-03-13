@@ -22,7 +22,7 @@ $funciones_nav = new Clases\PublicFunction();
                     <div class="inner">
                         <span class="text">Seguinos</span>
                         <span class="icons">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/pages/category/Product-Service/Gema-Arquitectura-y-Construcci%C3%B3n-323910314828274/" target="_blank"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
                                 </span>
                     </div>
@@ -38,7 +38,7 @@ $funciones_nav = new Clases\PublicFunction();
                 <div id="site-logo" class="clearfix">
                     <div id="site-log-inner">
                         <a href="<?= URL; ?>/index" rel="home" class="main-logo">
-                            <img src="<?= URL; ?>/assets/img/logo-small.png" alt="Autora" width="186" height="39" data-retina="assets/img/logo-small@2x.png" data-width="186" data-height="39">
+                            <img src="<?= URL; ?>/assets/img/GeMa Logotipo (1).jpg" alt="Autora" width="186" height="39" data-retina="assets/img/logo-small@2x.png" data-width="186" data-height="39">
                         </a>
                     </div>
                 </div><!-- /#site-logo -->
@@ -49,22 +49,22 @@ $funciones_nav = new Clases\PublicFunction();
 
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
-                        <li class="menu-item menu-item-has-children current-menu-item">
-                            <a href="<?= URL; ?>/index">Inicio</a>
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"index")) { echo "current-menu-item"; } ?> ">
+                            <a  href="<?= URL; ?>/index">Inicio</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"empresa")) { echo "current-menu-item"; } ?> ">
                             <a href="<?= URL; ?>/c/empresa" alt="EMPRESA">Sobre Nosotros</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"servicios")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/servicios">Servicios</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"productos")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/productos">Productos</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"blogs")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/blogs">Blog</a>
                         </li>
-                        <li class="menu-item menu-item-has-children">
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"contacto")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/contacto">Contacto</a>
                         </li>
                     </ul>

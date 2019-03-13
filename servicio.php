@@ -21,7 +21,7 @@ $template->themeInit();
         <div id="page" class="clearfix">
             <!-- Featured Title -->
             <div id="featured-title" class="featured-title clearfix text-center">
-                <h1><?= ucfirst($servicio_data["titulo"]); ?></h1>
+                <h1 style="padding-top: 20px !important;"><?= ucfirst($servicio_data["titulo"]); ?></h1>
             </div>
             <!-- End Featured Title -->
             <!-- Main Content -->
@@ -58,7 +58,7 @@ $template->themeInit();
                     <div id="sidebar">
                         <br>
                         <div class="widget widget_lastest">
-                            <h2 class="widget-title"><span>Mas Servicios</span></h2>
+                            <h2 class="widget-title"><span>Más Servicios</span></h2>
                             <?php
                             foreach ($serviciosData as $nov) {
                                 $imagenes->set("cod", $nov['cod']);

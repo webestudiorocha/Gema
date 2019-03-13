@@ -7,22 +7,23 @@ $cod       = $funciones->antihack_mysqli(isset($_GET["cod"]) ? $_GET["cod"] : ''
 $borrarImg = $funciones->antihack_mysqli(isset($_GET["borrarImg"]) ? $_GET["borrarImg"] : '');
 
 $servicios->set("cod", $cod);
-$serviciosInd = $servicios->view();
-$imagenes->set("cod", $serviciosInd["cod"]);
-$imagenes->set("link", "servicios&accion=modificar");
+$servicio = $servicios->view();
 
 $categorias = new Clases\Categorias();
-$data = $categorias->list(array("area = 'servicios'"));
+$data = $categorias->list(array("area = 'servicios'"), "", "");
+
+$imagenes->set("cod", $servicio["cod"]);
+$imagenes->set("link", "servicios&accion=modificar");
 
 if ($borrarImg != '') {
     $imagenes->set("id", $borrarImg);
     $imagenes->delete();
-    $funciones->headerMove(URL . "/index.php?op=productos&accion=modificar&cod=$cod");
+    $funciones->headerMove(URL . "/index.php?op=servicios&accion=modificar&cod=$cod");
 }
 
 if (isset($_POST["agregar"])) {
     $count = 0;
-    $cod   = $serviciosInd["cod"];
+    $cod   = $servicio["cod"];
     //$servicios->set("id", $id);
     $servicios->set("cod", $cod);
     $servicios->set("titulo", $funciones->antihack_mysqli(isset($_POST["titulo"]) ? $_POST["titulo"] : ''));
@@ -40,17 +41,17 @@ if (isset($_POST["agregar"])) {
         $dominio   = $partes[$dom];
         $prefijo   = substr(md5(uniqid(rand())), 0, 10);
         if ($dominio != '') {
-            $destinoFinal = "../assets/archivos/" . $prefijo . "." . $dominio;
+            $destinoFinal     = "../assets/archivos/" . $prefijo . "." . $dominio;
             move_uploaded_file($imgInicio, $destinoFinal);
             chmod($destinoFinal, 0777);
             $destinoRecortado = "../assets/archivos/recortadas/a_" . $prefijo . "." . $dominio;
 
-            $zebra->source_path            = $destinoFinal;
-            $zebra->target_path            = $destinoRecortado;
-            $zebra->jpeg_quality           = 80;
-            $zebra->preserve_aspect_ratio  = true;
+            $zebra->source_path = $destinoFinal;
+            $zebra->target_path = $destinoRecortado;
+            $zebra->jpeg_quality = 80;
+            $zebra->preserve_aspect_ratio = true;
             $zebra->enlarge_smaller_images = true;
-            $zebra->preserve_time          = true;
+            $zebra->preserve_time = true;
 
             if ($zebra->resize(800, 700, ZEBRA_IMAGE_NOT_BOXED)) {
                 unlink($destinoFinal);
@@ -65,61 +66,78 @@ if (isset($_POST["agregar"])) {
     }
 
     $servicios->edit();
-    $funciones->headerMove(URL . "/index.php?op=servicios");
+    $funciones->headerMove(URL . "/index.php?op=servicios&accion=modificar&cod=$cod");
 }
 ?>
 
 <div class="col-md-12 ">
-    <h4>Servicios</h4>
+    <h4>
+        Servicios
+    </h4>
     <hr/>
     <form method="post" class="row" enctype="multipart/form-data">
-        <label class="col-md-4">Título:<br/>
-            <input type="text" value="<?=$serviciosInd["titulo"]?>" name="titulo">
+        <label class="col-md-4">
+            Título:<br/>
+            <input type="text" value="<?=$servicio["titulo"]?>" name="titulo">
         </label>
-        <label class="col-md-4">Categoría:<br/>
+        <label class="col-md-4">
+            Categoría:<br/>
             <select name="categoria">
                 <?php
                 foreach ($data as $categoria) {
-                    if($servicios["categoria"] == $categoria["cod"]) {
+                    if($servicio["categoria"] == $categoria["cod"]) {
                         echo "<option value='".$categoria["cod"]."' selected>".$categoria["titulo"]."</option>";
                     } else {
                         echo "<option value='".$categoria["cod"]."'>".$categoria["titulo"]."</option>";
-                    } 
+                    }
                 }
                 ?>
             </select>
         </label>
-        <label class="col-md-4">Fecha:<br/>
-            <input type="date" name="fecha" value="<?=$serviciosInd["fecha"]?>">
+        <label class="col-md-4">
+            Fecha:<br/>
+            <input type="date" name="fecha" value="<?=$servicio["fecha"]?>">
         </label>
 
-        <div class="clearfix"></div>
-        <label class="col-md-12">Desarrollo:<br/>
-            <textarea name="desarrollo" class="ckeditorTextarea"><?=$serviciosInd["desarrollo"];?></textarea>
+        <div class="clearfix">
+        </div>
+        <label class="col-md-12">
+            Desarrollo:<br/>
+            <textarea name="desarrollo" class="ckeditorTextarea">
+                <?=$servicio["desarrollo"];?>
+            </textarea>
         </label>
-        <div class="clearfix"></div>
-        <label class="col-md-12">Palabras claves dividas por ,<br/>
-            <input type="text" name="keywords" value="<?=$serviciosInd["keywords"]?>">
+        <div class="clearfix">
+        </div>
+        <label class="col-md-12">
+            Palabras claves dividas por ,<br/>
+            <input type="text" name="keywords" value="<?=$servicio["keywords"]?>">
         </label>
-        <label class="col-md-12">Descripción breve<br/>
-            <textarea name="description"><?=$serviciosInd["description"]?></textarea>
+        <label class="col-md-12">
+            Descripción breve<br/>
+            <textarea name="description">
+                <?=$servicio["description"]?>
+            </textarea>
         </label>
         <br/>
         <div class="col-md-12">
             <div class="row">
                 <?php
-$imagenes->imagenesAdmin();
-?>
+                $imagenes->imagenesAdmin();
+                ?>
             </div>
         </div>
-        <div class="clearfix"></div>
-        <label class="col-md-12">Imágenes:<br/>
+        <div class="clearfix">
+        </div>
+        <label class="col-md-12">
+            Imágenes:<br/>
             <input type="file" id="file" name="files[]" multiple="multiple" accept="image/*" />
         </label>
-        <div class="clearfix"></div>
+        <div class="clearfix">
+        </div>
         <br/>
         <div class="col-md-12">
-            <input type="submit" class="btn btn-primary" name="agregar" value="Guardar" />
+            <input type="submit" class="btn btn-primary" name="agregar" value="Modificar Servicio" />
         </div>
     </form>
 </div>
