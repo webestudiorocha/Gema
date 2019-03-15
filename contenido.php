@@ -81,7 +81,7 @@ $template->themeInit();
                                         <div class="col-md-6 bg-light-grey">
                                             <div class="themesflat-content-box clearfix" data-margin="0 25% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
                                                 <div class="themesflat-headings style-1 clearfix">
-                                                    <h2 class="heading">Gema</h2>
+                                                    <h2 style="font-size: 25px !important;" class="heading">Gema Arquitectura y Construcción</h2>
                                                     <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
                                                     <p class="sub-heading margin-top-30"><?php $contenido->set("cod", "DESCRIPCION");
                                                         $conDescripcion =  $contenido->view();

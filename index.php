@@ -50,7 +50,7 @@ $categoria_data = $categoria->list($filter);
                                         <!-- Slide 1 -->
                                         <li data-transition="random">
                                             <!-- Main Image -->
-                                            <img  src="<?= URL . '/' . $img_data['ruta'] ?>"   style="width: 50% !important; height: 100px !important;" >
+                                            <img  src="<?= URL . '/' . $img_data['ruta'] ?>"  >
                                             <!-- Layers -->
                                             <div class="tp-caption tp-resizeme text-white font-heading font-weight-600"
                                                 data-x="['left','left','left','center']" data-hoffset="['34','34','34','0']"
@@ -131,7 +131,7 @@ $categoria_data = $categoria->list($filter);
                                        <div class="col-md-6 bg-light-grey">
                                            <div class="themesflat-content-box clearfix" data-margin="0 25% 0 4.5%" data-mobilemargin="0 0 0 4.5%">
                                                <div class="themesflat-headings style-1 clearfix">
-                                                   <h2 class="heading">Gema</h2>
+                                                   <h2 style="font-size: 25px !important;" class="heading">Gema Arquitectura y Construcción</h2>
                                                    <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>
                                                    <p class="sub-heading margin-top-30">
                                                        <?php $contenido->set("cod", "DESCRIPCION");
@@ -183,7 +183,7 @@ $categoria_data = $categoria->list($filter);
                                                             <div class="inner">
                                                                 <div class="thumb data-effect-item">
                                                                     <a href="<?= URL . '/servicio/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>">
-                                                                        <img style="height: 250px; width: 100%; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                                                        <img src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
                                                                     <div class="overlay-effect bg-color-accent"></div>
                                                                 </div>
                                                                 <div class="text-wrap">
@@ -240,7 +240,7 @@ $categoria_data = $categoria->list($filter);
                                                         <div class="project-item">
                                                             <div class="inner">
                                                                 <div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-                                                                    <img style=" height: 250px !important; background: url(<?= URL . '/' . $img['ruta'] ?>) no-repeat center center/cover;" src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
+                                                                    <img  src="<?= URL . '/' . $img['ruta'] ?>" alt="Image">
                                                                     <div class="text-wrap text-center">
                                                                         <h5 class="heading"><a href="<?= URL . '/producto/' . $funciones->normalizar_link($port['titulo']) . '/' . $funciones->normalizar_link($port['cod']) ?>"><?= ucfirst($port['titulo']); ?></a></h5>
                                                                         <h6 style="color: white !important;">

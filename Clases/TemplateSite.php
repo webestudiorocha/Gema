@@ -64,7 +64,7 @@ class TemplateSite
         echo '<meta http-equiv="title" content="' . $this->title . '" />';
         echo '<meta name="description" lang=es content="' . $this->description . '" />';
         echo '<meta name="keywords" lang=es content="' . $this->keywords . '" />';
-        echo '<link href="' . URL . '/assets/images/iconos/empresa.png" rel="Shortcut Icon" />';
+        echo '<link href="' . URL . '/assets/img/logomobile.jpg" rel="Shortcut Icon" />';
         echo '<meta name="DC.title" content="' . $this->title . '" />';
         echo '<meta name="DC.subject" content="' . $this->description . '" />';
         echo '<meta name="DC.description" content="' . $this->description . '" />';

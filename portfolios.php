@@ -3,19 +3,19 @@ require_once "Config/Autoload.php";
 Config\Autoload::runSitio();
 $template = new Clases\TemplateSite();
 $funciones = new Clases\PublicFunction();
-$template->set("title", TITULO . " | Productos");
-$template->set("description", "Productos de" . TITULO);
-$template->set("keywords", "Productos de" . TITULO);
+$template->set("title", TITULO . " | Portfolios");
+$template->set("description", "Portfolios de" . TITULO);
+$template->set("keywords", "Portfolios de" . TITULO);
 $template->set("body", "header-fixed page no-sidebar header-style-2 topbar-style-1 menu-has-search");
 $template->themeInit();
 $categoria = isset($_GET["categoria"]) ? $_GET["categoria"] : '';
-$productos = new Clases\Productos();
-$productos->set("categoria", $categoria);
+$portfolios = new Clases\Portfolio();
+$portfolios->set("categoria", $categoria);
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : '0';
-$novedadesPaginador = $productos->paginador('', 3);
+$novedadesPaginador = $portfolios->paginador('', 3);
 $imagenes = new Clases\Imagenes();
 $categorias = new Clases\Categorias();
-$filter = array("area='productos'");
+$filter = array("area='portfolios'");
 $categoria_data = $categorias->list($filter);
 
 
@@ -36,8 +36,8 @@ else:
     $url = CANONICAL;
 endif;
 
-$producto_Data = $productos->listWithOps("", "", $cantidad * $pagina . ',' . $cantidad);
-$numeroPaginas = $productos->paginador("", $cantidad);
+$portfolio_Data = $portfolios->list("", "", $cantidad * $pagina . ',' . $cantidad);
+$numeroPaginas = $portfolios->paginador("", $cantidad);
 
 ?>
     <div id="wrapper" class="animsition">
@@ -46,7 +46,7 @@ $numeroPaginas = $productos->paginador("", $cantidad);
 
             <!-- Featured Title -->
             <div id="featured-title" class="featured-title clearfix text-center">
-                <h1 style="padding-top: 20px !important;">Productos</h1>
+                <h1 style="padding-top: 20px !important;">Portfolios</h1>
             </div>
             <!-- End Featured Title -->
 
@@ -63,38 +63,35 @@ $numeroPaginas = $productos->paginador("", $cantidad);
                                             <div class="col-md-12">
                                             
 
-                                                <div class="themesflat-spacer clearfix" id="<?= $categoria['cod'];?>" data-desktop="40"
+                                                <div class="themesflat-spacer clearfix" id="" data-desktop="40"
                                                      data-mobile="35" data-smobile="35"></div>
                                                 <div class="themesflat-project style-2 isotope-project has-margin mg15 data-effect clearfix">
-                                                    <?php foreach ($producto_Data as $prod): ?>
+                                                    <?php foreach ($portfolio_Data as $prod): ?>
                                                         <?php $imagenes->set("cod", $prod["cod"]);
                                                         $img = $imagenes->view(); ?>
-                                                        <div class="project-item <?= $prod["categoria"]; ?> villa">
+                                                        <div class="project-item  villa">
                                                             <div class="inner">
                                                                 <div class="thumb data-effect-item has-effect-icon w40 offset-v-19 offset-h-49 imagen">
-                                                                    <a href='<?= URL . '/producto/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'>
+                                                                    <a href='<?= URL . '/portfolio/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'>
                                                                         <img src="<?= URL . "/" . $img["ruta"] ?>"
                                                                              class='img-fluid'
                                                                              style=' background: url("<?= URL . "/" . $img["ruta"] ?>") no-repeat center center/cover;'
                                                                              alt=''>
                                                                         <div class="overlay-effect bg-color-3"></div>
                                                                         <div class="elm-link">
-                                                                            <a href="<?= URL . '/producto/' . $funciones->normalizar_link($prod['titulo']) . "/" . $prod['cod'] ?>"
+                                                                            <a href="<?= URL . '/portfolio/' . $funciones->normalizar_link($prod['titulo']) . "/" . $prod['cod'] ?>"
                                                                                class="icon-1"> </a>
                                                                         </div>
                                                                     </a>
                                                                 </div>
                                                                 <div class="text-wrap">
                                                                     <h5 class="heading"><a
-                                                                                href='<?= URL . '/producto/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'> <?= ucfirst($prod["titulo"]) ?></a>
+                                                                                href='<?= URL . '/portfolio/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'> <?= ucfirst($prod["titulo"]) ?></a>
                                                                     </h5>
-                                                                    <h6>
-                                                                        <a
-                                                                                href='<?= URL . '/producto/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'>$<?= ucfirst($prod["precio"]) ?></a>
-                                                                    </h6>
+
                                                                     <div class="elm-meta">
                                                                         <p>
-                                                                            <a href='<?= URL . '/producto/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'> <?= strip_tags(substr($prod["desarrollo"], 0, 200)); ?>...</a>
+                                                                            <a href='<?= URL . '/portfolio/' . $funciones->normalizar_link($prod["titulo"]) . '/' . $prod["cod"] ?>'> <?= strip_tags(substr($prod["desarrollo"], 0, 200)); ?>...</a>
                                                                         </p>
 
                                                                     </div>

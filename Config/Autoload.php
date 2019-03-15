@@ -4,11 +4,12 @@ class autoload
 {
     public static function runSitio()
     {
+        require_once "Config/Minify.php";
         session_start();
         $_SESSION["cod_pedido"] = isset($_SESSION["cod_pedido"]) ? $_SESSION["cod_pedido"] : substr(md5(uniqid(rand())), 0, 10);
-        define('URL', "http://".$_SERVER['HTTP_HOST']."/Gema");
+        define('URL', "http://".$_SERVER['HTTP_HOST']."/GemaArquitectura");
         define('CANONICAL', "http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]);
-        define('TITULO', "Gema");
+        define('TITULO', "Gema Arquitectura y Construcción");
         define('TELEFONO', "5555555");
         define('CIUDAD', "San Francisco");
         define('PROVINCIA', "Cordoba");
@@ -31,8 +32,8 @@ class autoload
     public static function runAdmin()
     {
         session_start();
-        define('URLSITE',"http://".$_SERVER['HTTP_HOST']."/Gema/");
-        define('URL', "http://".$_SERVER['HTTP_HOST']."/Gema/admin");
+        define('URLSITE',"http://".$_SERVER['HTTP_HOST']."/GemaArquitectura/");
+        define('URL', "http://".$_SERVER['HTTP_HOST']."/GemaArquitectura/admin");
         require_once "../Clases/Zebra_Image.php";
         spl_autoload_register(
             function ($clase)

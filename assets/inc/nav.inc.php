@@ -13,7 +13,7 @@ $funciones_nav = new Clases\PublicFunction();
             <div class="top-bar-inner-wrap">
                 <div class="top-bar-content">
                     <div class="inner">
-                        <span class="address content">fgdgdfgd</span>
+                        <span class="address content">Porteña, Córdoba</span>
                         <span class="phone content">11111</span>
                     </div>
                 </div><!-- /.top-bar-content -->
@@ -38,7 +38,7 @@ $funciones_nav = new Clases\PublicFunction();
                 <div id="site-logo" class="clearfix">
                     <div id="site-log-inner">
                         <a href="<?= URL; ?>/index" rel="home" class="main-logo">
-                            <img src="<?= URL; ?>/assets/img/GeMa Logotipo (1).jpg" alt="Autora" width="186" height="39" data-retina="assets/img/logo-small@2x.png" data-width="186" data-height="39">
+                            <img src="<?= URL; ?>/assets/img/logomobile.jpg" alt="Autora"  data-retina="<?= URL; ?>/assets/img/logomobile.jpg" data-width="186" data-height="39">
                         </a>
                     </div>
                 </div><!-- /#site-logo -->
@@ -59,10 +59,13 @@ $funciones_nav = new Clases\PublicFunction();
                             <a href="<?= URL; ?>/servicios">Servicios</a>
                         </li>
                         <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"productos")) { echo "current-menu-item"; } ?>">
-                            <a href="<?= URL; ?>/productos">Productos</a>
+                            <a href="<?= URL; ?>/portfolios">Portfolio</a>
                         </li>
                         <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"blogs")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/blogs">Blog</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"social")) { echo "current-menu-item"; } ?>">
+                            <a href="<?= URL; ?>/social">Redes Sociales</a>
                         </li>
                         <li class="menu-item menu-item-has-children <?php if(strpos(CANONICAL,"contacto")) { echo "current-menu-item"; } ?>">
                             <a href="<?= URL; ?>/contacto">Contacto</a>
